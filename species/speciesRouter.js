@@ -15,7 +15,6 @@ router.put('/populate/characters', function(req, res) {
         .in(doc.character_keys)
         .then(chars => {
           doc.characters = chars.map(char => char._id);
-
           return doc.save();
         });
     });
